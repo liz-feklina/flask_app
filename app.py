@@ -96,7 +96,7 @@ def form_checked():
 def stats():
     people_num = db.session.query(Users.id).count()
     avg_age = db.session.query(func.round(func.avg(Users.age), 2)).all()[0][0]
-    max_age = db.session.query(func.max(Users.age)).all()[0][0s]
+    max_age = db.session.query(func.max(Users.age)).all()[0][0]
     tapki_yes = db.session.query(Answers).filter_by(answer='yes').count()
     tapki_per = round(tapki_yes/people_num, 2)
     nums_freq = {'684537426': 0,
