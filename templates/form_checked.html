@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}ВсЁ!{% endblock %}
+
+{% block content %}
+    <style>
+    body{
+        background: LightPink;
+        text-align: center;
+        vertical-align: center;
+    }
+    </style>
+    <body>
+    <h1>{{ user.name }}, Вы всё прошли, классно!</h1>
+    Если хотите узнать статистику, перейдите по <a href="/stats">ссылке</a>.
+    </body>
+{% endblock %}

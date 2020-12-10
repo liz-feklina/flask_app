@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Познавательная статистика{% endblock %}
+
+{% block content %}
+    <style>
+    body{
+        background: Indigo;
+        color: White;
+        vertical-align: center;
+    }
+    </style>
+    <body>
+    <h1>Результаты опроса</h1>
+    <h2>Статистика</h2>
+    <p> Сколько человек прошло опрос: {{ people_num }}</p>
+    <ul>
+        <li>Средний возраст людей: {{ aver_age }}, а самому пожилому {{ max_age }}</li>
+        <li>Тапки носят все нормальные люди, а таких среди опрошенных {{ tapki_yes }}, то есть {{ tapki_per }}%</li>
+        <li>Меньше всего людей выбрали число {{ unfreq_num }}. Почему? Кто знает ...... </li>
+    </ul>
+    </body>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Интересная анкета!{% endblock %}
+
+{% block content %}
+    <form action="/form_checked" method = 'GET'>
+    <fieldset>
+    <legend><b>Весьма интересный и познавательный опрос!</b></legend>
+    <h4>Для начала укажите ваши личные данные:</h4><br><br>
+    Как Вас зовут?<br>
+    <input type="text" name="name" required pattern='[A-Za-zА-Яа-яЁё /-]+'><br><br>
+    Сколько вам лет?<br>
+    <input type="text" name="age" required pattern='[0-9]{1,3}'><br><br>
+    Какого цвета ваши глаза?<br>
+    <input type="radio" name="eyes" value="black">чёрные<br>
+    <input type="radio" name="eyes" value="blue">синие<br>
+    <input type="radio" name="eyes" value="green">зелёные<br>
+    <input type="radio" name="eyes" value="gray">серые<br>
+    <input type="radio" name="eyes" value="special">особенные :о)<br><br><br>
+    <h4>А теперь ответьте на вопросы:</h4><br><br>
+    Носите ли вы тапки дома?<br>
+    <input type="radio" name="tapki" value="yes" checked>Конечно, да!<br>
+    <input type="radio" name="tapki" value="no">Нет, я странный<br><br>
+    Выберите время, в которое вам удобно встретиться:<br>
+    <input type="checkbox" name="meet_time" value="monday">понедельник<br>
+    <input type="checkbox" name="meet_time" value="morning">утро<br>
+    <input type="checkbox" name="meet_time" value="winter">зима<br>
+    <input type="checkbox" name="meet_time" value="holidays">на каникулах<br>
+    <input type="checkbox" name="meet_time" value="covid">во время пандемии<br><br>
+    Придумайте псевдоним себе!<br>
+    Например: Onneton opiskelija<br>
+    <input type="text" name="alias" required pattern='[A-Za-zА-Яа-яЁё /-_]+'><br><br><br>
+    <h4>А теперь самый важный вопрос:</h4><br><br>
+    Какое число выберут меньше всего человек?<br>
+    <input type="radio" name="number" value="684537426">684537426<br>
+    <input type="radio" name="number" value="136247">136247<br>
+    <input type="radio" name="number" value="482828">482828<br>
+    <input type="radio" name="number" value="390175">390175<br><br>
+    <p><input type="submit" value="Отправить"></p>
+    </fieldset>
+</form>
+{% endblock %}

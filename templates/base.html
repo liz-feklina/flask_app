@@ -1,0 +1,28 @@
+<html><head>
+		<title>{% block title %} {% endblock %}</title>
+	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<!-- Bootstrap Core CSS -->
+    	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+		<nav id="mainNav" class="navbar navbar-default navbar-custom" style="
+    height: 60px;
+">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="/" class="navbar-brand">Главная страница</a>
+				</div>
+				<nav class="collapse navbar-collapse" id="bs-navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li> <a href="/form">Анкета</a> </li>
+						<li> <a href="/stats">Статистика</a> </li>
+					</ul>
+				</nav>
+			</div>
+		</nav>
+		{% block content %}{% endblock %}
+		<footer class="bs-docs-footer" style="background-color:rgb(253,253,253); padding-top:20px;">
+		</footer>
+    </body>
+</html>
